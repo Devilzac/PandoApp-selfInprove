@@ -19,6 +19,7 @@ export class ChatComponent implements OnInit {
   idOrig = null;
   idDest = null;
   nombreDestino = [];
+  nombreOrigen = [];
 
 
   constructor(private _chatServ: ChatService, private _contactosServ: ContactosService) { }
@@ -41,6 +42,10 @@ export class ChatComponent implements OnInit {
           if (dat[u]._id == this.conversaciones[i].idDest) {
             this.nombreDestino.push(dat[u].name);
             console.log("found", this.nombreDestino);
+          }
+          if (dat[u]._id == this.conversaciones[i].idOrig) {
+            this.nombreOrigen.push(dat[u].name);
+            console.log("found", this.nombreOrigen);
           }
         }
       }
