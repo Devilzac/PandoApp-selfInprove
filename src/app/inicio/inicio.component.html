@@ -1,0 +1,33 @@
+<!-- <h3>Inicio Sesión</h3> -->
+<div class="container">
+<div class="logs">
+    <logo-animado></logo-animado>
+  <!-- <img src="../../assets/img/arbol.png"> -->
+  <h4>¿No os poneis de acuerdo?</h4>
+  <h5>¡Pon un PandoApp en tu vida!</h5>
+</div>
+<div>
+ <form #tareaForm="ngForm" (ngSubmit)="formularioLogin()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input [(ngModel)]="nuevoUsuario.email_username" name="email_username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="pandoapp@pandoapp.com">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Contraseña</label>
+      <input [(ngModel)]="nuevoUsuario.pssw" name="pssw" type="password" class="form-control" id="exampleInputPassword1" placeholder="contraseña">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+    </div>
+    <div class="botoncito">
+      <a [routerLink]="['/registro']">Registrate</a>
+      <button  [disabled]="!tareaForm.valid" class="btn btn-primary">Entrar</button>
+    </div>
+  </form>
+</div>
+</div>
+
+<!-- 
+[routerLink]="['/contactos']" -->
