@@ -1,9 +1,9 @@
 <div *ngFor="let conv of conversaciones; let i = index;" class="col-12">
   <a [routerLink]="['/conversacion', conv.idOrig, conv.idDest]">
     <div class="row chat">
-      <img class="rounded-circle col-1" src="../../assets/img/avatarM.png">
-      <p class="col-1">{{nombreDestino[i]}} ---></p>
-      <p class="col-1">{{nombreOrigen[i]}}</p>
+      <img class="rounded-circle col-4" src="../../assets/img/{{i}}.svg">
+      <p class="col-4">{{nombreDestino[i]}} -></p>
+      <p class="col-4">{{nombreOrigen[i]}}</p>
       <!-- <p class="col-9">{{conv.texto}}</p> -->
     </div>
   </a>
