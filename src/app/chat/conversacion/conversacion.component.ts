@@ -18,6 +18,7 @@ export class ConversacionComponent implements OnInit {
   private _docSub: Subscription;
 
   msgtxt = '';
+  usernameDest = null;
   username = null;
   losmsgs = null;
 
@@ -41,9 +42,13 @@ export class ConversacionComponent implements OnInit {
       //console.log("usuariosDelServ", dat);
       for (let i = 0; i < dat.length; i++) {
         //console.log("found1", dat[i]._id);
-        if (dat[i]._id == this.idDest) {
+        if (dat[i]._id == this.idOrig) {
           this.username = dat[i].name;
-          //console.log("found", this.username);
+          console.log("found", this.username);
+        }
+        if (dat[i]._id == this.idDest) {
+          this.usernameDest = dat[i].name;
+          console.log("found2", this.usernameDest);
         }
       }
     });

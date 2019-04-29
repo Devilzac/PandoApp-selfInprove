@@ -10,11 +10,23 @@ $margin-top-cajatxt:15px;
 .cnt-conversacion-prin{
     
     padding: 15px;
+    .end-user{
+        width: 100%;
+        text-align: center;
+        background: #3ca879;
+        border-top-right-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+        color:#fff;
+        span{
+            text-transform: capitalize;
+        }
+    }
     .cnt-display-conver{
         padding: 15px;        
-        height: 700px;
+        height: calc(100vh - 160px);
         border: solid 2px $color;
-        border-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
     }
     .cnt-display{
         height: calc(100% - #{$altura-input} - #{$margin-top-cajatxt});

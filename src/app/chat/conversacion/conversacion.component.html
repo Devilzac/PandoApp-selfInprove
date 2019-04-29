@@ -1,4 +1,5 @@
 <div class="cnt-conversacion-prin row">
+  <div class="end-user">Estoy hablando con <span>{{this.usernameDest}}</span></div>
   <div class="cnt-display-conver col-12">
     <div class="cnt-display col-12">
       <div *ngFor="let aM of losmsgs" [class]="aM.user==username?'bocadillo origen':'bocadillo destino'">
