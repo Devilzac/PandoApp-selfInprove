@@ -1,7 +1,7 @@
-<div *ngFor="let user of usuarios" class="col-12">
+<div *ngFor="let user of usuarios; let i = index;" class="col-12">
   <div class="row contacto">
-    <img class="rounded-circle col-1" src="../../assets/img/avatarM.png">
-    <p class="col-11">{{user.name}}</p>
+    <img class="rounded-circle col-4" src="../../assets/img/{{user.imgPerfil}}">
+    <p class="col-8">{{user.name}}</p>
   </div>
 </div>
 <div>
